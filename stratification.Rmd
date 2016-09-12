@@ -11,7 +11,9 @@ output:
     number_sections: no
     theme: readable
     toc: yes
-    toc_float: yes
+    toc_depth: 2
+    toc_float:
+      collapsed: no
 runtime: shiny
 resource_files:
 - app/app.R
