@@ -248,7 +248,8 @@ will be subject to another post.
 
 ## Shiny app
 
-You can examine and download the code of the example shiny app on [github](link). 
+You can examine and download the code of the example shiny app on
+[github](https://github.com/stenzei/stratify). 
 
 
 # Acknowledgements
