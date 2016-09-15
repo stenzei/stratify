@@ -10,7 +10,7 @@ ui <- fluidPage(
       helpText("Click inside the blue framed strata to 
                see the stratification of Parameter 3 and 4 below."),
       plotOutput("plot1", height = 300, width = 500,
-                 dblclick = "plot1_dblclick",
+                 click = "plot1_click",
                  brush = brushOpts(
                   id = "plot1_brush",
                   resetOnNew = TRUE)),

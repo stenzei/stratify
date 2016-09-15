@@ -77,11 +77,11 @@ server <- function(input, output) {
                             limits.upper.1 = NULL, 
                             limits.upper.2 = NULL)
   # Observe if a point is double-clicked. 
-  observeEvent(input$plot1_dblclick, {
-    dbl.click <- input$plot1_dblclick
-    if (!is.null(dbl.click)) {                  # if there is a double click
-      point$x <- dbl.click$x                    # assign its coordinates to 
-      point$y <- dbl.click$y                    # the point variable,
+  observeEvent(input$plot1_click, {
+    click <- input$plot1_click
+    if (!is.null(click)) {                  # if there is a double click
+      point$x <- click$x                    # assign its coordinates to 
+      point$y <- click$y                    # the point variable,
     }
     # Construct standard evaluation (SE) expressions 
     # using the coordinates of the double clicked point.
@@ -190,8 +190,8 @@ server <- function(input, output) {
         plot1.layer$layer1
     })
   })
-  observeEvent(input$plot1_dblclick, {
-    if (is.null(input$plot1_dblclick$x)) return()
+  observeEvent(input$plot1_click, {
+    if (is.null(input$plot1_click$x)) return()
     plot1.layer$layer1 <- geom_point(data = dta2(), aes(var1, var2), 
                                      colour = "darkblue", alpha = 0.2) 
   })
@@ -212,7 +212,7 @@ server <- function(input, output) {
         plot2.layer$layer3
     })
   })
-  observeEvent(input$plot1_dblclick, {
+  observeEvent(input$plot1_click, {
     if (is.null(dta2())) return()  
     plot2.layer$layer1 <- geom_point(data = dta2(), aes(var3, var4), 
                                      colour = "red", alpha = 0.2)
