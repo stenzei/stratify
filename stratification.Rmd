@@ -14,12 +14,7 @@ output:
     toc_depth: 2
     toc_float:
       collapsed: no
-runtime: shiny
-resource_files:
-- app/app.R
-- app/server.R
-- app/stratify-data.R
-- app/ui.R
+layout: post
 ---
 
 ```{r setup, include=FALSE}
@@ -90,17 +85,13 @@ shown in the lower plot.
 Double-click inside one of the strata in the upper plot to see which subset of
 parameters tree and four belongs to the selected stratum.
 
-```{r tabsets, echo=FALSE}
-shinyAppDir("app",
-  options = list(
-    width = "100%", height = 810
- )
-)
-```
+<iframe src="https://stenze.shinyapps.io/app-stratification/" 
+style="border:none" height="800" width="100%"></iframe>
+
 
 # Code
 
-In the following R-Code is shown, which performs that stratification efficiently.
+In the following R-code is shown, which performs that stratification efficiently.
 The code uses mainly `dyplr` and related packages for data preparation, 
 `ggplot2` for plotting and and `shiny` for interactivity.
 
@@ -252,7 +243,3 @@ will be subject to another post.
 
 You can examine and download the code of the example shiny app on
 [github](https://github.com/stenzei/stratify). 
-
-
-# Acknowledgements
-I thank Sebastian H. and Marco S. for helpful comments and hints.

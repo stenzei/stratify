@@ -6,7 +6,7 @@ library(tibble)
 library(tidyr)
 library(dplyr)
 library(lazyeval)
-source('app/stratify-data.R')
+source('stratify-data.R')
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
